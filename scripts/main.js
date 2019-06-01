@@ -1,3 +1,3 @@
-var myHeading = document.querySelector('h1').onClick = function() {
+document.querySelector('h1').onclick = function() {
   alert("Aye!");
 }
