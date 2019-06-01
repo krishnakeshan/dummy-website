@@ -1,8 +1,20 @@
 var myHeading = document.querySelector('h1')
 var myButton = document.querySelector('button')
 
+//check if name is already stored
+if (!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  myHeading.textContent = "Welcome back, " + localStorage.getItem('name'))
+}
+
+myHeading.onclick = function() {
+  setUserName()
+}
+
+//function to store the user's name
 function setUserName() {
   var userName = prompt("Please enter your username: ");
   localStorage.setItem("name", userName);
-  myHeading.textContent = "Mozilla is cute, " + userName;
+  myHeading.textContent = "Mozilla is cool, " + userName;
 }
